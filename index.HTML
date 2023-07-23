@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gotham:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Lego Store </title>
+  </head>
+  <body>
+    <div class="header">
+        <div>
+          <a href="https://www.lego.com/en-us/aboutus/newsroom"><button class="back-button">News About Lego⬅</button></a>
+        </div>
+        <div>
+          <button class="signup-button" onclick="openSignupModal()">Sing Up</button>
+          <button class="vip-button" onclick="openVIPModal()">VIP</button>
+        </div>
+      </div>
+      <div class="modal-container" id="signupModal">
+        <div class="modal-content">
+          <h2>Sing up</h2>
+          <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email Adrress">
+            <input type="password" placeholder="Password">
+            <input type="tel" placeholder="Phone Number">
+            <select>
+              <option value="" disabled selected>Choose your country</option>
+              <option value="pais1">Canada</option>
+              <option value="pais2">United States</option>
+              <option value="pais2">Japan</option>
+              <option value="pais2">Colombia</option>
+              <option value="pais2">Mexico</option>
+            </select>
+            <button type="submit">Save Your Information</button>
+          </form>
+          <button class="close-button" onclick="closeSignupModal()">Close</button>
+        </div>
+      </div>
+      <div class="modal-container" id="vipModal">
+        <div class="modal-content">
+          <div class="info-box">
+            <div class="text">
+              <h2>Become a VIP</h2>
+              <p>Get Rewarded with LEGO® VIP — It's FREE!</p>
+                <p>Sign in to your account if you are already a member, or join now to start enjoying rewards and other perks!
+                Earn points for shopping in LEGO Brand Retail Stores and at LEGO.com</p>
+                <p>Unlock members-only discounts and experiences
+                Get Early Access to Exclusive sets
+                Enjoy members-only gifts and more
+                Receive monthly promotions and specials for VIPs</p>
+            </div>
+            <div class="image">
+              <img src="images/King_VIP_Guide-min.png" alt="Imagen VIP">
+            </div>
+          </div>
+          <button class="close-button" onclick="closeVIPModal()">Close
+            <i class="fa-solid fa-crown"></i></button>
+        </div>
+      </div>
+        <nav class="navbar">
+            <div class="navbar-left">
+              <img src="images/LEGO_logo.svg.png" alt="Logo">
+              <button class="nav-button">Shop</button>
+              <button class="nav-button">Discover</button>
+              <button class="nav-button">Help</button>
+            </div>
+            <div class="navbar-right">
+              <div class="search-icon" onclick="toggleSearchBar()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="search-bar" id="searchBar">
+                  <input type="text" placeholder="Buscar..."  onclick="stopPropagation()">
+                </div>
+              </div>
+              <div class="heart-icon">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <div class="bag-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </div>
+            </div>
+          </nav>
+      </div>
+      <div class="section1">
+        <div class="left-content">
+          <h1> Lego:</h1><p> Where the Imagination is Limitles</p>
+        </div>
+        <div class="right-content">
+         <video id="videoPlayer" controls autoplay> 
+            <source src="/images/LEGO 90th Anniversary _ We are all builders (1080p).mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+          </video>
+        </div>
+        </div>
+      </div>
+    
+      <div class="section2">
+        <div class="circle-container">
+          <div class="circle" style="background-image: url('images/ninjago.jpg')">
+            <a href="https://www.pluggedin.com/tv-reviews/ninjago/" class="circle-link">Lego Ninja Go</a>
+          </div>
+          <div class="circle" style="background-image: url('images/city.jpg')">
+            <a href="https://www.ign.com/articles/2017/04/05/lego-city-undercover-review-2" class="circle-link">Lego City</a>
+          </div>
+          <div class="circle" style="background-image: url('images/batman.jpg')">
+            <a href="https://www.rottentomatoes.com/m/the_lego_batman_movie" class="circle-link">Lego Batman</a>
+          </div>
+          <div class="circle" style="background-image: url('images/star\ wars.webp')">
+            <a href="https://www.ign.com/articles/legostarwarstheskywalkersagareview" class="circle-link">Lego Star Wars</a>
+          </div>
+          <div class="circle" style="background-image: url('images/chima.jpg')">
+            <a href="https://thebrickblogger.com/2015/01/2015-lego-legends-of-chima-sets-reviews/" class="circle-link">Lego Chima</a>
+          </div>
+          <div class="circle" style="background-image: url('images/friends.jpg')">
+            <a href="https://www.nytimes.com/wirecutter/reviews/best-lego-sets-for-kids/" class="circle-link">Lego Friends</a>
+          </div>
+          <div class="circle" style="background-image: url('images/movie.jpg')">
+            <a href="https://www.rottentomatoes.com/m/the_lego_movie" class="circle-link">Lego Movie</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="section3">
+        <div class="recommendations">
+          <h2>Recommendations for You</h2>
+          <div class="product-container">
+            <div class="product" style="background-image: url('images/set1.webp')">
+              <div class="product-content">
+                <p>Lego Ninja Go Set</p>
+                <div class="rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+                <p class="price">$150.00</p>
+                <button class="buy-button">Buy Now</button>
+              </div>
+            </div>
+            <div class="product" style="background-image: url('images/set2.jpg')">
+              <div class="product-content">
+                <p>Lego Batman Set</p>
+                <div class="rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+                <p class="price">$220.00</p>
+                <button class="buy-button">buy now</button>
+              </div>
+            </div>
+            <div class="product" style="background-image: url('images/set3.jpg')">
+              <div class="product-content">
+                <p>Lego Star Wars Set</p>
+                <div class="rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+                <p class="price">$850.00</p>
+                <button class="buy-button">Buy Now</button>
+              </div>
+            </div>
+            <div class="product" style="background-image: url('images/set\ 4.webp')">
+              <div class="product-content">
+                <p>Lego city Set</p>
+                <div class="rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+                <p class="price">$245.00</p>
+                <button class="buy-button">Comprar ahora</button>
+              </div>
+            </div>
+            <div class="product" style="background-image: url('images/set\ 5.jpg')">
+              <div class="product-content">
+                <p>Lego Chima set</p>
+                <div class="rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+                <p class="price">$1155.000</p>
+                <button class="buy-button">buy now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section4">
+        <p>All rights reserved © 2023 Lego</p>
+        <p>All rights reserved © 2023 IGN</p>
+        <p>All rights reserved © 2023 Rotten Tomatos</p>
+    
+        <div class="copyright">
+          <p>All rights reserved.</p>
+          <p>Privacy Policy | Terms of Use</p>
+        </div>
+      </div>
+    
+      
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        function openSignupModal() {
+          document.getElementById("signupModal").style.display = "block";
+        }
+        function closeSignupModal() {
+          document.getElementById("signupModal").style.display = "none";
+        }
+        function openVIPModal() {
+          document.getElementById("vipModal").style.display = "block";
+        }
+        function closeVIPModal() {
+          document.getElementById("vipModal").style.display = "none";
+        }
+      </script>
+    <script>
+      function toggleSearchBar() {
+        const searchBar = document.getElementById("searchBar");
+        searchBar.style.width = searchBar.style.width === "0px" ? "150px" : "0px";
+      }
+      function stopPropagation(event) {
+        event.stopPropagation();
+      }
+    </script>
+    <script>
+      // Esperar a que se cargue la página antes de ejecutar el código JavaScript
+document.addEventListener("DOMContentLoaded", function () {
+  // Obtener el elemento del video
+  const videoPlayer = document.getElementById("videoPlayer");
+
+  // Reproducir el video automáticamente
+  videoPlayer.play();
+});
+    </script>
+    <script>
+    const carousel = document.querySelector(".carousel");
+const arrowLeft = document.querySelector(".left-arrow");
+const arrowRight = document.querySelector(".right-arrow");
+const recommendationBoxes = document.querySelectorAll(".recommendation-box");
+
+let currentIndex = 0;
+const maxIndex = recommendationBoxes.length - 1;
+
+function showRecommendations(index) {
+  recommendationBoxes.forEach((box, i) => {
+    if (i >= index && i < index + 4) {
+      box.style.display = "block";
+    } else {
+      box.style.display = "none";
+    }
+  });
+}
+
+function showNextRecommendations() {
+  if (currentIndex < maxIndex - 3) {
+    currentIndex++;
+    showRecommendations(currentIndex);
+  }
+}
+
+function showPreviousRecommendations() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    showRecommendations(currentIndex);
+  }
+}
+
+showRecommendations(currentIndex);
+    </script>
+</body>
+</html>
